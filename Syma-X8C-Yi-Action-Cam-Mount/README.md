@@ -19,3 +19,6 @@ YiCam-Mount-X8C-1g
 ------------------
 Streamlined version with 20 degrees angle down.
 
+YiCam-Mount-X8C-shoe
+--------------------
+Just the solid mount connector shoe.
