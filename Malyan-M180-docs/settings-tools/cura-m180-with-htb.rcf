@@ -1,0 +1,10 @@
+[filament]
+name = cura-m180-with-htb
+diameter = 1.75
+multiplierPercent = 100
+printingTemperature = 210
+enableCooling = True
+bedTemperature = 60
+fanSpeedMin = 50
+fanSpeedMax = 100
+minimalLayerTime = 5
