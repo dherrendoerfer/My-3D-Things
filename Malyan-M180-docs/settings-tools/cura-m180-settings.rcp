@@ -35,15 +35,15 @@ startGCode = """
 ;start.gcode for Malyan M180, dual head
 (**** set temperatures ****)
 M109 S{BED} T0   (set bed temperature)
-M104 S{TEMP0} T0 (set extruder0 temperature)
 M104 S{TEMP1} T1 (set extruder1 temperature)
+M104 S{TEMP0} T0 (set extruder0 temperature)
 (**** set defaults ****)
 M103 (RPM off)
 M73 P0 (enable build progress)
 G21 (set units to mm)
 G90 (set positioning to absolute)
 (**** begin homing ****)
-G162 X Y F2500 (home XY axes maximum
+G162 X Y F2500 (home XY axes maximum)
 G161 Z F1100 (home Z axis minimum)
 G92 Z-5 (set Z to -5)
 G1 Z0.0 (move Z to "0")
