@@ -1,15 +1,15 @@
 [print]
 name = cura-m180-settings
-defaultQuality = NMWgWloHpH9161JgopwO3tiCRTfi6IL0
-travelSpeedMin = 80
-travelSpeedMax = 150
+defaultQuality = KM2URlZRJH2CjnqdyIN1FYwaJUvUpJoA
+travelSpeedMin = 45
+travelSpeedMax = 75
 firstLayerSpeedMin = 30
-firstLayerSpeedMax = 30
+firstLayerSpeedMax = 40
 infillSpeedMin = 60
-infillSpeedMax = 100
+infillSpeedMax = 70
 infillType = 0
 innerPerimeterMin = 40
-innerPerimeterMax = 80
+innerPerimeterMax = 70
 outerPerimeterMin = 30
 outerPerimeterMax = 60
 printSpeedMin = 40
@@ -25,8 +25,8 @@ infillDensityPercent = 20
 supportType = 0
 platformAdhesion = 0
 dualExtrusion = 0
-wipeAndPrimeTower = True
-oozeShield = True
+wipeAndPrimeTower = False
+oozeShield = False
 enableRetraction = True
 retractionSpeed = 40
 retractionDistance = 4
@@ -35,22 +35,22 @@ startGCode = """
 ;start.gcode for Malyan M180, dual head
 (**** set temperatures ****)
 M109 S{BED} T0   (set bed temperature)
-M104 S{TEMP0} T0 (set extruder0 temperature)
 M104 S{TEMP1} T1 (set extruder1 temperature)
+M104 S{TEMP0} T0 (set extruder0 temperature)
 (**** set defaults ****)
 M103 (RPM off)
 M73 P0 (enable build progress)
 G21 (set units to mm)
 G90 (set positioning to absolute)
 (**** begin homing ****)
-G162 X Y F2500 (home XY axes maximum
+G162 X Y F2500 (home XY axes maximum)
 G161 Z F1100 (home Z axis minimum)
 G92 Z-5 (set Z to -5)
 G1 Z0.0 (move Z to "0")
 G161 Z F100 (home Z axis minimum)
 M132 X Y Z A B (Recall stored home offsets for XYZAB axis)
 (**** move to waiting pos and haet up ****)
-G1 X104 Y-74 Z20 F3300.0 (move to waiting position)
+G1 X104 Y-70 Z20 F3300.0 (move to waiting position)
 G130 X0 Y0 A0 B0 (Lower stepper Vrefs while heating)
 M108 T0 (Select tool 0)
 M6 T0 (wait for toolhead, and HBP to reach temperature)
@@ -109,7 +109,7 @@ fixExtensiveStitching = False
 fanFullAtHeight = 0.5
 minimumSpeed = 10
 coolHeadLift = False
-numQuality = 2
+numQuality = 3
 [quality_0]
 name = 0.2 mm
 signature = bKX8jW8x15ajVUlmKXEmH65Co1PEfZwC
@@ -120,3 +120,8 @@ name = 0.15 mm
 signature = NMWgWloHpH9161JgopwO3tiCRTfi6IL0
 layerHeight = 0.15
 firstLayerHeight = 0.2
+[quality_2]
+name = 0.25 mm
+signature = KM2URlZRJH2CjnqdyIN1FYwaJUvUpJoA
+layerHeight = 0.25
+firstLayerHeight = 0.3
