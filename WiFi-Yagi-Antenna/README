@@ -1,0 +1,21 @@
+A small Yagi for Wifi
+
+Video documentation:
+https://youtu.be/t9evcC67pFQ
+
+There are dxf files for Laser Cutters and stl file for 3D printing.
+
+The parasitics lengths are (1.5mm copper wire)
+#1: 55mm
+#2: 55mm
+#3: 56mm
+
+The Reflector length is: (1.5mm copper wire)
+ 60mm (connect to signal ground)
+ 
+The dipole is 0.75 to 1mm silver coated copper wire
+ Dipole is wound over the dipole jig, thread wire through 
+ the 2 small holes in the jig. Make sure the 2 ends don't touch. 
+
+Use a 1/4 wave (2.44 Ghz) impedance match.
+ 20mm shielded signal cable (cut from connection pigtail)
